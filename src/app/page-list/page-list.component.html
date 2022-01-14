@@ -19,7 +19,14 @@
     </td>
     <td>{{page.wordcount}}</td>
     <td [innerHTML]="page.snippet"></td>
-    <td>{{page.pageid}}</td>
+    <td>
+      <a
+        target="_blank"
+        [href]="'https://en.wikipedia.org?curid=' + page.pageid"
+      >
+        {{page.pageid}}
+      </a>
+    </td>
   </tr>
   </tbody>
 </table>
